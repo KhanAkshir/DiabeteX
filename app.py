@@ -24,6 +24,8 @@ def predict_datapoint():
         Age = float(request.form.get('Age'))
         
         data=scaler.transform([[Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age]])
+
+        print(data)
         result=Diabetes.predict(data)
       
 
