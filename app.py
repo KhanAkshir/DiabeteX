@@ -11,6 +11,8 @@ scaler=pickle.load(open('models/Diabetes_scaler.pkl','rb'))
 @app.route('/',methods=["GET"])
 def index():
     return render_template('index.html')
+
+
 @app.route("/predictdata",methods=["GET","POST"])
 def predict_datapoint():
     if request.method=='POST':
